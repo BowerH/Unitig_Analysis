@@ -50,7 +50,9 @@ Barplot comparing total, core, and unique unitigs per ISL
 Scatterplot of unitig length vs. isolate presence, colored by ISL
 #### per_isl_scatterplots_filtered.png:
 Faceted scatterplots for each ISL, showing only unitigs > 100bp
-
+#### proxy_vs_assembly_scatter.png 
+(only if --assembly_dir provided): Proxy vs. assembly genome size scatter with 1:1 reference line
+#### Console summary of total/core/unique unitigs per file
 
 ## 🧠 Example
 
@@ -65,15 +67,18 @@ python Unitig_Analysis.py \
 
 Results:
 
-3 figures saved to results/plots/
+Figures saved to results/plots/
 
 Printed summary table of unitig counts per file
 
 
 ## 🔧 Customization
 
-Change the unitig length filter in the script (default: > 100 bp)
+- Change the unitig length filter in the script (default: > 100 bp)
 
-Add plt.xscale('log') if your unitigs span orders of magnitude
 
-Modify to export CSVs or summary tables as needed
+- Add plt.xscale('log') if your unitigs span orders of magnitude
+
+- Uncomment lines in the script to print full presence-count distribution
+  
+- Modify to export CSVs or summary tables as needed
